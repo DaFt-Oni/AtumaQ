@@ -256,3 +256,14 @@ footer {
         margin: 10px 0;
     }
 }
+
+@media (max-width: 375px) {
+    .btn-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn-primary {
+        margin: 10px;
+    }
+}
