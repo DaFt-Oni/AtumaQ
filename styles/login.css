@@ -11,6 +11,11 @@ body {
     min-height: 100vh;
 }
 
+h2 {
+    color: #002D62;
+    margin-bottom: 20px;
+}
+
 
 
 /* Nav */
