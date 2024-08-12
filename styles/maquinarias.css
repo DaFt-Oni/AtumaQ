@@ -314,6 +314,11 @@ main {
     background-color: #003d7a;
 }
 
+.machine-img{
+    max-width: 300px; 
+    height: auto;
+}
+
 
 
 /* Estilo de la sección de capacitación general */
