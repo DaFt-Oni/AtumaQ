@@ -359,6 +359,26 @@ main {
 
 
 
+.continue-box {
+    margin: 50px;
+}
+
+.continue-box button {
+    width: 200px;
+    padding: 10px;
+    background-color: #002D62;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.continue-box button:hover {
+    cursor: pointer;
+}
+
+
+
 /* footer */
 footer {
     background-color: #002D62;
