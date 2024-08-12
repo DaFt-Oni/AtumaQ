@@ -1,6 +1,3 @@
-importar a phpmyadmin atumaq.sql, no setup.sql, sólo en caso de que atumaq.sql no funcione ahora sí, importar setup.sql
-
-Entrar a http://localhost/AtumaQ/index.html para la sección principal de demostración e inicio
-Entrar a http://localhost/AtumaQ/structure/select_sect.html para entar a atumaq
-
 se pueden agregar nuevas maquinas, grupos y etiquetas.
+
+Debido a que el proyecto está en github pages, que no soporta php ni db, todo lo "dinámico" está hecho con js, las funcionalidades de agregar maquinas, grupos y etiquetas funcionan perfectamente pero no se guardan (debido a que no existe un db), pero no es importante debido a que la web es una muestra de la s funcionalidades del producto final, también, para ingresar es "Iniciar Paseo", le da a "Continuar" y listo ya que no se necesitan credenciales para iniciar sesión (porque, nuevamente, tampoco hay db)
