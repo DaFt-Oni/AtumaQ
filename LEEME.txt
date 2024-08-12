@@ -1,0 +1,6 @@
+importar a phpmyadmin atumaq.sql, no setup.sql, sólo en caso de que atumaq.sql no funcione ahora sí, importar setup.sql
+
+Entrar a http://localhost/AtumaQ/index.html para la sección principal de demostración e inicio
+Entrar a http://localhost/AtumaQ/structure/select_sect.html para entar a atumaq
+
+se pueden agregar nuevas maquinas, grupos y etiquetas.

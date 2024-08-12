@@ -1,0 +1,261 @@
+/* Css General */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+/* Nav */
+
+header {
+    background-color: #002D62;
+    padding: 15px 0;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+/* Estilo para elementos deshabilitados en el nav */
+.nav-item.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    color: #c0c0c0;
+}
+
+.nav-item.disabled a {
+    color: #c0c0c0;
+    text-decoration: none;
+}
+
+/* Estilo para subrayado en hover */
+.nav-item a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el ícono de tres líneas */
+#nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+#nav-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Estilos para el menú desplegable en pantallas pequeñas */
+@media (max-width: 428px) {
+    header {
+        padding: 30px 0;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        background-color: #002D62;
+        display: none;
+        align-items: center;
+    }
+
+    #nav-toggle {
+        display: flex;
+    }
+
+    #nav-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    #nav-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #nav-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+
+
+/* Inicio y contenedores */
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.maintenance-section {
+    text-align: center;
+}
+
+.maintenance-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.machine-card {
+    background-color: #ffffff;
+    width: 630px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.6s ease, padding 0.1s ease;
+    overflow: hidden;
+    cursor: pointer;
+    max-height: 200px; /* Altura inicial */
+}
+
+.machine-card .basic-info,
+.machine-card .detailed-info {
+    padding: 20px;
+    transition: opacity 0.6s ease;
+}
+
+.machine-card .basic-info {
+    display: flex;
+    align-items: center;
+    transition: max-height 0.6s ease; /* Añadido para suavizar la transición */
+    overflow: hidden; /* Asegura que el contenido no desborde el contenedor */
+}
+
+.machine-card .basic-info img {
+    width: 200px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.machine-card .basic-info div {
+    text-align: left;
+}
+
+.machine-card .detailed-info {
+    display: none;
+    text-align: left;
+    opacity: 0;
+}
+
+.machine-card.expanded {
+    max-height: 800px; /* Ajusta la altura máxima expandida */
+    padding-bottom: 20px;
+    overflow: hidden; /* Oculta el desbordamiento para el estado expandido */
+}
+
+.machine-card.expanded .basic-info {
+    max-height: 300px; /* Ajusta la altura máxima de .basic-info en estado expandido */
+}
+
+.machine-card.expanded .detailed-info {
+    display: block;
+    opacity: 1;
+}
+
+.machine-card h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #002D62;
+}
+
+.machine-card button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #002D62;
+    cursor: pointer;
+}
+
+
+
+/* Footer */
+
+footer {
+    background-color: #002D62;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+
+
+/* Media Query para pantallas pequeñas a partir de 435px */
+@media (max-width: 435px) {
+    .machine-card {
+        width: 100%;
+        max-width: 100%;
+        max-height: 300px; /* Ajusta la altura máxima de la tarjeta contraída */
+    }
+
+    .machine-card .basic-info {
+        flex-direction: column;
+        align-items: center;
+        max-height: none; /* Asegura que no haya restricción de altura en pantallas pequeñas */
+    }
+
+    .machine-card .basic-info img {
+        width: 150px; /* Imagen más pequeña */
+        margin: 0 0 10px 0;
+    }
+
+    .machine-card .basic-info div {
+        text-align: center;
+    }
+
+    .machine-card .detailed-info {
+        text-align: center;
+    }
+}

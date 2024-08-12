@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles/maquinarias.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.2/uicons-bold-straight/css/uicons-bold-straight.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.2/uicons-solid-rounded/css/uicons-solid-rounded.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-brands/css/uicons-brands.css'> <!--IG Icon-->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-solid-rounded/css/uicons-solid-rounded.css'> <!--Email Icon-->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    <!--Icon-Logo-->
+    <link rel="icon" href="../imgs/icons/atumaq.ico" type="image/png">
+
+    <title>Maquinarias - AtumaQ</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="nav-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul id="nav-menu">
+                <li class="nav-item"><a href="select_sect.html">Home</a></li>
+                <li class="nav-item disabled"><a href="#">Maquinarias</a></li>
+                <li class="nav-item"><a href="../structure/info_mant.html">Mantenimientos</a></li>
+                <li class="nav-item"><a href="../structure/capacitaciones.html">Capacitaciones</a></li>
+            </ul>
+        </nav>
+    </header>      
+
+    <main>
+        <!-- Mensajes flash -->
+        <div class="flash-message" id="flash-message"></div>
+
+        <div class="add-machine">
+            <button id="openModal">Agregar Maquinaria</button>
+            <button id="addGroupsButton">Agregar Grupos</button>
+            <button id="addLabelsButton">Agregar Etiquetas</button>
+        </div>
+
+        <div class="filters">
+            <label for="label-filter">Filtrar por Etiqueta:</label>
+            <select id="label-filter">
+                <option value="">Todas</option>
+                <!-- Opciones dinámicas se agregarán aquí -->
+            </select>
+
+            <label for="group-filter">Filtrar por Grupo:</label>
+            <select id="group-filter">
+                <option value="">Todos</option>
+                <!-- Opciones dinámicas se agregarán aquí -->
+            </select>
+        </div>
+
+        <div class="machine-list" id="machine-list">
+            <h2>Lista de Maquinaria</h2>
+            <!-- Maquinarias dinámicas se agregarán aquí -->
+        </div>
+    </main>
+
+    <footer>
+        <p>Contactos <br><br> <i class="fi fi-sr-envelope" style="margin-left: 10px; margin-right: 5px; vertical-align: -2px;"></i>tantay.contactos@gmail.com - <i class="fi fi-brands-instagram" style="margin-left: 10px; margin-right: 5px; vertical-align: -2px;"></i>@tm_tantay</p>
+    </footer>
+
+    <!-- Modal para agregar maquinaria -->
+    <div id="addMachineModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Agregar Maquinaria</h2>
+            <form id="addMachineForm">
+                <label for="machine-name">Nombre de la Máquina:</label>
+                <input type="text" id="machine-name" required>
+
+                <label for="machine-labels">Etiquetas:</label>
+                <select id="machine-labels" multiple required>
+                    <!-- Opciones dinámicas se agregarán aquí -->
+                </select>
+
+                <label for="machine-group">Grupo:</label>
+                <select id="machine-group">
+                    <!-- Opciones dinámicas se agregarán aquí -->
+                </select>
+
+                <label for="machine-description">Descripción:</label>
+                <textarea id="machine-description" rows="4" required></textarea>
+
+                <label for="machine-image">Imagen:</label>
+                <input type="file" id="machine-image" accept="image/*" required>
+
+                <button type="button" id="submitMachine">Agregar Maquinaria</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para agregar grupos -->
+    <div id="addGroupsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Agregar Grupo</h2>
+            <form id="addGroupForm">
+                <label for="group-name">Nombre del Grupo:</label>
+                <input type="text" id="group-name" required>
+                <button type="button" id="submitGroup">Agregar Grupo</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para agregar etiquetas -->
+    <div id="addLabelsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Agregar Etiqueta</h2>
+            <form id="addLabelForm">
+                <label for="label-name">Nombre de la Etiqueta:</label>
+                <input type="text" id="label-name" required>
+                <button type="button" id="submitLabel">Agregar Etiqueta</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../scripts/js/maquinaria.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

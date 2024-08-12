@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/index.css"> <!--Style-->
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.2/uicons-bold-straight/css/uicons-bold-straight.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-solid-rounded/css/uicons-solid-rounded.css'> <!--Exclamation Icon-->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-rounded/css/uicons-regular-rounded.css'> <!--Reportes Icon-->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-brands/css/uicons-brands.css'> <!--IG Icon-->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-solid-rounded/css/uicons-solid-rounded.css'> <!--Email Icon-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"> <!--CDN Style de AOS-->
+
+    <!--Icon-Logo-->
+    <link rel="icon" href="imgs/icons/atumaq.ico" type="image/png">
+
+    <title>Inicio - TPA</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="nav-item"><a href="structure\login.html">Iniciar Paseo</a></li>
+                <li class="nav-item"><a href="#features">Características</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <section class="hero" data-aos="fade-up">
+            <div class="hero-content">
+                <h1>Bienvenidos a AtumaQ</h1>
+                <p>Transformamos el mantenimiento y la capacitación en el puerto de Arica con nuestra solución web innovadora.</p>
+                <a href="#features" class="btn-primary">Descubrir Más</a>
+                <a href="structure\login.html" class="btn-primary">Iniciar Paseo</a>
+            </div>
+            <img src="https://plus.unsplash.com/premium_photo-1661879937750-3c071ab344a2?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Puerto" data-aos="fade-left">
+        </section>
+
+        <section id="problem-solution" class="problem-solution">
+            <div class="card" data-aos="flip-left">
+                <i class="fi fi-sr-exclamation"></i>
+                <h2>Problema</h2>
+                <p>En el puerto de Arica (TPA), se ha identificado una necesidad urgente de un sistema eficiente y sostenible para el mantenimiento de la maquinaria portuaria. La falta de un sistema centralizado afecta la operatividad, provoca dificultades para el seguimiento del estado y mantenimiento, y contribuye a riesgos operativos y pérdidas.</p>
+            </div>
+
+            <div class="card" data-aos="flip-right">
+                <i class="fi fi-bs-check"></i>
+                <h2>Solución</h2>
+                <p>Proporcionamos una aplicación web que centraliza y automatiza la gestión de mantenimientos y capacitaciones. La solución incluye un sistema de información centralizada, programación de capacitaciones, notificaciones automáticas, generación de reportes, y acceso fácil y remoto, mejorando la operación, seguridad y eficiencia del puerto.</p>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <h2 data-aos="fade-down">Características</h2>
+            <div class="feature" data-aos="zoom-in">
+                <i class="fi fi-bs-calendar"></i>
+                <h3>Programación Automática</h3>
+                <p>Agenda y gestiona mantenimientos y capacitaciones de forma automática con notificaciones y recordatorios.</p>
+            </div>
+            <div class="feature" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fi fi-bs-lock"></i>
+                <h3>Seguridad y Confianza</h3>
+                <p>Accede a la información con seguridad y confidencialidad, garantizando la integridad de los datos.</p>
+            </div>
+            <div class="feature" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fi fi-rr-file-medical-alt"></i>
+                <h3>Generación de Reportes</h3>
+                <p>Obtén reportes detallados y análisis de datos para una mejor toma de decisiones y evaluación de desempeño.</p>
+            </div>
+            <div class="feature" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fi fi-bs-cloud"></i>
+                <h3>Acceso Remoto</h3>
+                <p>Accede al sistema desde cualquier lugar y en cualquier momento, facilitando la gestión desde cualquier dispositivo.</p>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer>
+        <p>Contactos <br><br> <i class="fi fi-sr-envelope" style="margin-left: 10px; margin-right: 5px; vertical-align: -2px;"></i>tantay.contactos@gmail.com - <i class="fi fi-brands-instagram" style="margin-left: 10px; margin-right: 5px; vertical-align: -2px;"></i>@tm_tantay</p>
+    </footer>
+    <script src="scripts/js/index.js"></script> <!--JS Propio-->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script> <!--CDN JS AOS-->
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

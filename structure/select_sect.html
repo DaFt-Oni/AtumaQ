@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles/select_sect.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.2/uicons-bold-straight/css/uicons-bold-straight.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.2/uicons-solid-rounded/css/uicons-solid-rounded.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-brands/css/uicons-brands.css'> <!--IG Icon-->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-solid-rounded/css/uicons-solid-rounded.css'> <!--Email Icon-->    
+
+    <!--Icon-Logo-->
+    <link rel="icon" href="../imgs/icons/atumaq.ico" type="image/png">
+
+    <title>Inicio - AtumaQ</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="nav-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul id="nav-menu">
+                <li class="nav-item disabled"><a href="#">Home</a></li>
+                <li class="nav-item"><a href="maquinaria.html">Maquinarias</a></li>
+                <li class="nav-item"><a href="../structure/info_mant.html">Mantenimientos</a></li>
+                <li class="nav-item"><a href="../structure/capacitaciones.html">Capacitaciones</a></li>
+            </ul>
+        </nav>
+    </header>      
+
+    <main>
+        <section class="intro">
+            <h1>Bienvenido a AtumaQ</h1>
+            <p>Elige una de las secciones a continuación para comenzar:</p>
+        </section>
+
+        <section class="sections">
+            <div class="section-card" data-aos="fade-up">
+                <i class="fi fi-sr-settings"></i>
+                <h2>Maquinarias</h2>
+                <p>Administra y visualiza toda la maquinaria en el sistema. Agrega nuevas máquinas, edita información existente y clasifica cada máquina en grupos y etiquetas.</p>
+                <a href="maquinaria.php" class="btn-primary">Ir a Maquinarias</a>
+            </div>
+
+            <div class="section-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fi fi-sr-calendar-check"></i>
+                <h2>Mantenimientos</h2>
+                <p>Gestiona las tareas de mantenimiento para cada máquina. Programa y registra mantenimientos, y consulta el estado actual de cada máquina.</p>
+                <a href="../structure/info_mant.html" class="btn-primary">Ir a Mantenimientos</a>
+            </div>
+
+            <div class="section-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fi fi-sr-book"></i>
+                <h2>Capacitaciones</h2>
+                <p>Accede a los recursos de capacitación para el uso y mantenimiento de la maquinaria. Consulta manuales, medidas de seguridad y prácticas recomendadas.</p>
+                <a href="../structure/capacitaciones.html" class="btn-primary">Ir a Capacitaciones</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contactos <br><br> <i class="fi fi-sr-envelope" style="margin-left: 10px; margin-right: 5px; vertical-align: -2px;"></i>tantay.contactos@gmail.com - <i class="fi fi-brands-instagram" style="margin-left: 10px; margin-right: 5px; vertical-align: -2px;"></i>@tm_tantay</p>
+    </footer>
+    <script src="../scripts/js/select_sect.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

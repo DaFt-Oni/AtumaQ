@@ -1,0 +1,258 @@
+/* index.css */
+
+
+/* Estilo General*/
+
+html {
+    scroll-behavior: smooth;
+}
+  
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f4f7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+/* nav */
+header {
+    background-color: #002D62;
+    padding: 15px 0;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+    font-size: 17px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e0e0e0;
+}
+
+/* Estilo para elementos deshabilitados en el nav */
+.nav-item.disabled {
+    pointer-events: none; /* Evita que el elemento sea clickeable */
+    cursor: not-allowed; /* Cambia el cursor para indicar que el elemento está deshabilitado */
+    color: #c0c0c0; /* Color gris para el texto deshabilitado */
+}
+
+.nav-item.disabled a {
+    color: #c0c0c0; /* Color gris para el texto deshabilitado */
+    text-decoration: none; /* Quita el subrayado en el estado deshabilitado */
+}
+
+/* Estilo para subrayado en hover */
+.nav-item a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+
+
+/* Inicio */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background: linear-gradient(to bottom right, #002D62, #0056A0);
+    color: white;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero-content {
+    max-width: 500px;
+    animation: fadeInUp 2s ease-out;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: #002D62;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e0e0e0;
+}
+
+.hero img {
+    width: 50%;
+    border-radius: 10px;
+    animation: fadeInLeft 2s ease-out;
+}
+
+.problem-solution {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 2s ease-out;
+}
+
+.card {
+    background-color: #f9f9f9;
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    animation: flipIn 1s ease-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card i {
+    font-size: 2rem;
+    color: #002D62;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    color: #002D62;
+}
+
+
+/* Caracteristicas */
+.features {
+    padding: 40px;
+    background-color: #e0e0e0;
+    text-align: center;
+    animation: fadeInUp 2s ease-out;
+}
+
+.features h2 {
+    margin-bottom: 30px;
+    color: #002D62;
+}
+
+.feature {
+    display: inline-block;
+    width: 22%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature i {
+    font-size: 2rem;
+    color: #002D62;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    color: #002D62;
+    margin-bottom: 10px;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #002D62;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+
+
+/* Animaciones Personalizadas */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes flipIn {
+    from { opacity: 0; transform: rotateY(-90deg); }
+    to { opacity: 1; transform: rotateY(0); }
+}
+
+
+
+/* Media Query for small screens */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img {
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    .problem-solution {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .features {
+        padding: 20px;
+    }
+
+    .feature {
+        width: 80%;
+        margin: 10px 0;
+    }
+}

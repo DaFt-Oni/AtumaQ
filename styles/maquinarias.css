@@ -1,0 +1,383 @@
+/* Estilo general para la sección de maquinaria */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f4f7;
+}
+
+
+
+/* Nav */
+
+header {
+    background-color: #002D62;
+    padding: 15px 0;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+/* Estilo para elementos deshabilitados en el nav */
+.nav-item.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    color: #c0c0c0;
+}
+
+.nav-item.disabled a {
+    color: #c0c0c0;
+    text-decoration: none;
+}
+
+/* Estilo para subrayado en hover */
+.nav-item a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el ícono de tres líneas */
+#nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+#nav-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Estilos para el menú desplegable en pantallas pequeñas */
+@media (max-width: 428px) {
+    header {
+        padding: 30px 0;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        background-color: #002D62;
+        display: none;
+        align-items: center;
+    }
+
+    #nav-toggle {
+        display: flex;
+    }
+
+    #nav-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    #nav-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #nav-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+
+
+/* Intro*/
+
+main {
+    padding: 20px;
+}
+
+/* Estilo de la sección agregar máquina */
+.add-machine {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.add-machine button {
+    background-color: #002D62;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.add-machine button:hover {
+    background-color: #0056A0;
+}
+
+
+
+/* Estilo del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal h2 {
+    color: #002D62;
+    margin-bottom: 20px;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal label {
+    margin-bottom: 5px;
+}
+
+.modal input,
+.modal select,
+.modal textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.modal button {
+    background-color: #002D62;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.modal button:hover {
+    background-color: #0056A0;
+}
+
+
+
+/* Estilo de los filtros */
+.filters {
+    margin-bottom: 30px;
+}
+
+.filters label {
+    margin-right: 10px;
+}
+
+.filters input,
+.filters select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.filters select {
+    margin-right: 0;
+}
+
+
+
+/* Estilo de la lista de máquinas */
+.machine-list {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.machine-list h2 {
+    color: #002D62;
+    margin-bottom: 20px;
+}
+
+.machine-item {
+    background-color: #002D62; /* Color oscuro similar al nav */
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 80%;
+    display: flex;
+}
+
+.info-machine{
+    margin-left: 20px;
+}
+
+.machine-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.machine-item h3 {
+    margin-bottom: 10px;
+}
+
+.machine-item p {
+    margin-bottom: 10px;
+}
+
+.machine-item button {
+    background-color: #0056A0;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.machine-item button:hover {
+    background-color: #003d7a;
+}
+
+
+
+/* Estilo de la sección de capacitación general */
+.training-section {
+    margin-top: 30px;
+}
+
+.training-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.training-item {
+    margin-bottom: 20px;
+}
+
+.training-item h3 {
+    color: #002D62;
+    margin-bottom: 10px;
+}
+
+/*Footer*/
+
+footer {
+    background-color: #002D62;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+/* Mensajes Flash*/
+.flash-message {
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.flash-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.flash-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.flash-message {
+    animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
