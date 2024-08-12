@@ -113,8 +113,8 @@ nav ul li a:hover {
 }
 
 .hero img {
-    width: 50%;
-    border-radius: 10px;
+    width: 100%;
+    border-radius: 40px;
     animation: fadeInLeft 2s ease-out;
 }
 
