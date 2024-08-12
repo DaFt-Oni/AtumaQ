@@ -386,3 +386,13 @@ footer {
     90% { opacity: 1; }
     100% { opacity: 0; }
 }
+
+
+
+/*Responsive*/
+
+@media (max-width: 435px) {
+    .add-machine button {
+        margin: 10px;
+    }
+}
