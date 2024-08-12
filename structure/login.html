@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +27,7 @@
         <div>
             <h2>Características De la Sección</h2>
         </div>
-        
+
         <div class="card-box">
             <div>
                 <div class="card" data-aos="fade-up" data-aos-duration="1000">
@@ -48,19 +48,48 @@
                 </div>            
             </div>
         </div>
-        <div class="login-container" data-aos="zoom-in">
-            <div class="login-box">
-                <h1>Inicio de sesión</h1>
-                <form>
-                    <input type="text" id="rut" placeholder="RUT: 12345678-9">
-                    <input type="password" id="password" placeholder="Contraseña">
-                    <button type="button" onclick="window.location.href='select_sect.html';">Ingresar</button>
-                </form>
+
+        <div style="margin-top: 30px; margin-bottom: 10px;">
+            <h2>Cómo Se Vería:</h2>
+        </div>
+
+        <!-- Aquí es donde se incrustará la página login4iframe.html -->
+        <div class="chrome-browser-frame">
+            <div class="chrome-browser-header">
+                <div class="chrome-browser-buttons">
+                    <span class="chrome-button close"></span>
+                    <span class="chrome-button minimize"></span>
+                    <span class="chrome-button maximize"></span>
+                </div>
+                <div class="chrome-browser-tab">
+                    <div class="tab-icon"></div>
+                    <span class="chrome-tab-title">LogIn - TPA</span>
+                </div>
+                <div class="chrome-tab-actions">
+                    <div class="action-button"></div>
+                    <div class="action-button"></div>
+                    <div class="action-button"></div>
+                </div>
             </div>
-            <div class="image-box">
-                <img src="https://thelogisticsworld.com/wp-content/uploads/2022/07/Vista-aerea-del-buque-de-carga-de-contenedores-en-el-mar..jpg" alt="TPA Banner">
+            <div class="chrome-browser-address-bar">
+                <div class="chrome-address-bar">
+                    <div class="lock-icon"></div>
+                    <span class="address-text">https://AtumaQ/login.php</span>
+                </div>
+                <div class="star-icon"></div>
+            </div>
+            <div class="chrome-browser-content">
+                <!-- Aquí puedes insertar el contenido de la página o una imagen -->
+                <iframe data-aos="zoom-in" src="login4iframe.html" frameborder="0"
+                style="width: 100%;
+                      height: 500px;
+                      border: 1px solid #ccc;
+                      border-radius: 8px;
+                      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                </iframe>
             </div>
         </div>
+
     </main>
     <footer>
         <p>Contactos <br><br> <i class="fi fi-sr-envelope" style="margin-left: 10px; margin-right: 5px; vertical-align: -2px;"></i>tantay.contactos@gmail.com - <i class="fi fi-brands-instagram" style="margin-left: 10px; margin-right: 5px; vertical-align: -2px;"></i>@tm_tantay</p>
@@ -70,4 +99,5 @@
     <script>
         AOS.init();
     </script>
+</body>
 </html>
