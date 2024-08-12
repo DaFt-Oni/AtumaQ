@@ -234,6 +234,12 @@ main {
 /* Estilo de los filtros */
 .filters {
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.filt-item {
+    margin-bottom: 20px;
 }
 
 .filters label {
