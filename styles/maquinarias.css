@@ -401,6 +401,7 @@ footer {
 @media (max-width: 435px) {
         .add-machine button {
         margin: 10px;
+        width: 190px;
     }
 
     .machine-img {
