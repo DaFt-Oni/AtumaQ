@@ -113,8 +113,8 @@ nav ul li a:hover {
 }
 
 .hero img {
-    width: 100%;
-    border-radius: 40px;
+    width: 50%;
+    border-radius: 10px;
     animation: fadeInLeft 2s ease-out;
 }
 
@@ -233,8 +233,8 @@ footer {
     }
 
     .hero img {
-        width: 80%;
-        margin-top: 20px;
+        width: 100%;
+        margin-top: 40px;
     }
 
     .problem-solution {
