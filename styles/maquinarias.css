@@ -286,7 +286,6 @@ main {
     transition: transform 0.3s, box-shadow 0.3s;
     width: 80%;
     display: flex;
-    flex-direction: column;
 }
 
 .info-machine{
@@ -399,7 +398,7 @@ footer {
 /*Responsive*/
 
 @media (max-width: 435px) {
-        .add-machine button {
+    .add-machine button {
         margin: 10px;
         width: 190px;
     }
@@ -407,5 +406,9 @@ footer {
     .machine-img {
         max-width: 278px;
         height: auto;
+    }
+
+    .machine-item {
+        flex-direction: column;
     }
 }
