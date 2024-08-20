@@ -1,4 +1,4 @@
 # AtumaQ
 Una solución para la gestión de tareas de mantenimiento en el puerto
 
-Para ingresa: <a href="https://daft-oni.github.io/AtumaQ/">Aquí</a>
+Para ingresar: <a href="https://daft-oni.github.io/AtumaQ/">Aquí</a>

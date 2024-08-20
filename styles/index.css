@@ -19,6 +19,16 @@ body {
     min-height: 100vh;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #909399;
+}
+
 
 
 /* nav */

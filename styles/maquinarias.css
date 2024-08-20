@@ -7,6 +7,16 @@ body {
     background-color: #f0f4f7;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #909399;
+}
+
 
 
 /* Nav */
