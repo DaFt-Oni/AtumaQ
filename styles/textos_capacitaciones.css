@@ -1,5 +1,3 @@
-/* capacitaciones.css */
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -24,7 +22,6 @@ a:hover {
 
 
 /* Nav */
-
 header {
     background-color: #002D62;
     padding: 15px 0;
@@ -58,7 +55,6 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Estilo para elementos deshabilitados en el nav */
 .nav-item.disabled {
     pointer-events: none;
     cursor: not-allowed;
@@ -70,12 +66,6 @@ nav ul li a:hover {
     text-decoration: none;
 }
 
-/* Estilo para subrayado en hover */
-.nav-item a:hover {
-    text-decoration: underline;
-}
-
-/* Estilos para el ícono de tres líneas */
 #nav-toggle {
     display: none;
     flex-direction: column;
@@ -93,12 +83,11 @@ nav ul li a:hover {
     transition: 0.4s;
 }
 
-/* Estilos para el menú desplegable en pantallas pequeñas */
 @media (max-width: 428px) {
     header {
         padding: 30px 0;
     }
-    
+
     nav ul {
         flex-direction: column;
         position: absolute;
@@ -156,65 +145,24 @@ nav ul li a:hover {
 
 
 
-/* Info Section */
-.info-section {
+/* Main Content */
+.content-section {
     padding: 40px;
-    background-color: #e0e0e0;
-    text-align: center;
+    background-color: #ffffff;
+    color: #333;
+    flex-grow: 1;
+    text-align: justify;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.info-section h2 {
-    margin-bottom: 30px;
+.content-section h2 {
+    margin-bottom: 20px;
     color: #002D62;
 }
 
-.info-content {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
-    width: 80%;
-    max-width: 500px;
-    transition: transform 0.3s ease;
-    display: inline-block;
-    position: relative; /* Añadido para el pseudo-elemento */
-    overflow: hidden; /* Asegura que el pseudo-elemento no se salga de la tarjeta */
-}
-
-.info-content i {
-    font-size: 2rem;
-    color: #002D62;
-    margin-bottom: 10px;
-}
-
-.box-a {
-    text-decoration: none;
-    color: black;
-    transition: color 0.2s;    
-}
-
-/* Efecto de velo semitransparente en hover */
-.info-content::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Color negro semitransparente */
-    opacity: 0; /* Inicialmente invisible */
-    transition: opacity 0.3s ease; /* Transición suave */
-}
-
-.info-content:hover::after {
-    opacity: 1; /* Muestra el velo al hacer hover */
-}
-
-.info-content h3 {
-    color: #002D62;
-    margin-bottom: 10px;
+.content-section p {
+    line-height: 1.6;
 }
 
 
@@ -226,23 +174,4 @@ footer {
     text-align: center;
     padding: 10px 0;
     margin-top: auto;
-}
-
-/* Animaciones Personalizadas */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Media Query for small screens */
-@media (max-width: 768px) {
-    .info-content {
-        width: 90%;
-        margin: 10px 0;
-    }
 }
