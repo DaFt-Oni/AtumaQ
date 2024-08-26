@@ -176,7 +176,7 @@ nav ul li a:hover {
     margin: 10px;
     text-align: center;
     width: 80%;
-    max-width: 500px;
+    max-width: 630px;
     transition: transform 0.3s ease;
     display: inline-block;
     position: relative; /* Añadido para el pseudo-elemento */
